@@ -23,6 +23,11 @@ jobs:
       - name: Збудувати проект
         run: npm run build  # Замініть на вашу команду збірки
 
+      - name: Deploy 
+        uses: RealG00D/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: build
       - name: Розгорнути на GitHub Pages
         run: |
           git config user.name "GitHub Actions"
